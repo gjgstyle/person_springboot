@@ -1,26 +1,18 @@
 package com.pratice.eurekaclient.controller;
 
-import java.sql.SQLException;
-
-import javax.validation.Valid;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.pratice.eurekaclient.Entity.ResponseBodyEntity;
 import com.pratice.eurekaclient.Entity.UserEntity;
 import com.pratice.eurekaclient.aop.AspLog;
 import com.pratice.eurekaclient.common.utils.EncryPasswordUtil;
 import com.pratice.eurekaclient.service.UserService;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("user")
@@ -47,6 +39,7 @@ public class UserController {
 			result.setResponseInfo("202", "当前用户已存在！", null);
 			return result;
 		}
+
 
 		try {
 			//获取随机安全指令
