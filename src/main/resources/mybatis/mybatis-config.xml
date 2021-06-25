@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 打印查询语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+		<!-- 返回空字段 -->
+		<setting name="callSettersOnNulls" value="true"/>
+	</settings>
+
+	<!-- 命名空间 -->
+	<typeAliases>
+<!--		<package name="com.sgpa.domain"/>-->
+	</typeAliases>
+	<!-- 映射map -->
+	<mappers>
+
+	</mappers>
+</configuration>
