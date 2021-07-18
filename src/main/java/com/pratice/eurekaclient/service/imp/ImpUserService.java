@@ -19,8 +19,8 @@ public class ImpUserService implements UserService{
 
 	@Override
 	public void regist(UserEntity user) {
-		userMapper.reigst(user);
-		//userDao.insert(user);
+		//userMapper.reigst(user);
+		userDao.insert(user);
 	}
 
 	@Override
